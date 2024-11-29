@@ -1,0 +1,26 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.hero-banner {
+  width: 100%;
+  height: $hero-banner-height;
+  background: url(./image/banner.png) no-repeat center/cover;
+  position: relative;
+  @include center-flex(column, 24px);
+
+  .banner-content {
+    color: $white;
+    text-align: center;
+    max-width: 352px;
+
+    h2 {
+      @include text-style($font-lora, 72px, 400, 90px, $white);
+      @include underline-style;
+    }
+
+    p {
+      @include text-style($font-poppins, 18px, 400, 30px, $white);
+      padding-top: 24px;
+    }
+  }
+}

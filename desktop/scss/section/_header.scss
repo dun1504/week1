@@ -1,0 +1,35 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+header {
+  width: 100%;
+  height: $header-height;
+
+  .splide__list {
+    @include center-flex(space-between);
+  }
+
+  .splide__track {
+    height: 34px;
+    width: 100%;
+    background-color: $black;
+    color: $white;
+  }
+
+  p {
+    &.phone {
+      padding-left: 20px;
+    }
+
+    &.address {
+      float: right;
+      padding-right: 20px;
+    }
+  }
+
+  .header-main {
+    @include text-style($font-lora, 32px, 500, normal);
+    text-align: center;
+    @include underline-style;
+  }
+}
